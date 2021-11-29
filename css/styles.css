@@ -1,11 +1,15 @@
 /* base style */
 *{
     box-sizing: border-box;
-    background-color: white;
 }
 body{
     font: 1em 'Work sans',sans-serif;
+    line-height: 1.5;
+    color: #3a3a3a;
     margin: 0;
+}
+.main-header{
+    background: fuchsia;
 }
 
 ul{
@@ -21,35 +25,97 @@ a{
 h1,
 h2,
 h3,
-p{
-    color: dimgray;
+a{
+    color: black;
     font-size: .95em;
 }
 
-h3,p{
-    text-align: center;
-}
 
 .banner img{
-    width: 25%;
+    width: 100%;
 }
 
 img{
-    width: 20%;
+    width: 100%;
 }
 
-footer{
+.nav-name,
+.top-page{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+
+
+
+
+
+/* --------Navigation---------*/
+
+.name{
+    font-size: 1.35em;
+}
+
+.name,
+.main-nav li{
     text-align: center;
+    display: block;
+    padding: 0.05em 15px;
 }
 
 
+.main-nav{
+    font-size: 0.95em;
+    color: darkgray;
+}
 
 
 /* flex box */
 
+/* =============
+    Base layout
+================*/
 
+.main-header{
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
 
+.main-footer,
+.sub-footer,
+.banner{
+    text-align: center;
+}
 
+.banner{
+    background: fuchsia;
+    padding: 2.2em 0;
+    margin-bottom: 48px;
+}
+.sub-title{
+    text-align: center;
+}
 
+.col{
+    padding: 0 1em;
+}
+
+.main-footer,
+.sub-nav{
+    background: coral;
+    padding: 2em 0;
+    margin-top: 30px;
+}
+
+.sub-nav{
+    padding-bottom: 0;
+    border-top: darkgrey solid .5px;
+    margin: 0 10px;
+}
+
+.profile-picture{
+    padding: 1em 1em;
+}
 
 /* media  */
