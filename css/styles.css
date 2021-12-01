@@ -8,8 +8,10 @@ body{
     color: #3a3a3a;
     margin: 0;
 }
-.main-header{
-    background: fuchsia;
+.main-header,
+.main-footer{
+    background: #f9f9f9;
+
 }
 
 ul{
@@ -29,6 +31,13 @@ a{
     color: black;
     font-size: .95em;
 }
+h3{
+    text-align: center;
+}
+.about-me{
+    padding-left: 1em;
+    padding-right: 1em;
+}
 
 
 .banner img{
@@ -39,11 +48,15 @@ img{
     width: 100%;
 }
 
-.nav-name,
+.main-header h1,
 .top-page{
     text-transform: uppercase;
     font-weight: 600;
     font-size: .8em;
+}
+.contact{
+    padding: 0 4em;
+    text-align: center;
 }
 
 
@@ -53,25 +66,30 @@ img{
 
 /* --------Navigation---------*/
 
-.name{
+.main-header h1{
     font-size: 1.35em;
 }
 
-.name,
+.main-header h1,
 .main-nav li{
     text-align: center;
     display: block;
     padding: 0.05em 15px;
+    
 }
 
 
 .main-nav{
     font-size: 0.95em;
     color: darkgray;
+    
+}
+.main-nav li{
+    border-bottom: 1px solid #ebecee;
 }
 
 
-/* flex box */
+
 
 /* =============
     Base layout
@@ -89,21 +107,19 @@ img{
 }
 
 .banner{
-    background: fuchsia;
     padding: 2.2em 0;
-    margin-bottom: 48px;
 }
 .sub-title{
     text-align: center;
 }
 
 .col{
-    padding: 0 1em;
+    padding-right: 1em;
+    padding-left:  1em;
 }
 
 .main-footer,
 .sub-nav{
-    background: coral;
     padding: 2em 0;
     margin-top: 30px;
 }
@@ -115,7 +131,73 @@ img{
 }
 
 .profile-picture{
-    padding: 1em 1em;
+    padding: 1em 1em 1em 1em;
 }
 
 /* media  */
+@media (min-width: 768px) {
+    .main-header,
+    .row{
+        width: 100%;
+        margin: 0 auto;
+
+    }
+    .banner img{
+        width: 50%;
+        float: right;
+
+    }
+
+    .banner p{
+        text-align: left;
+}
+
+@media (min-width: 1024px) {
+    .main-header,
+    .row{
+        width: 100%;
+        max-width: 1150px;
+    }
+}
+
+/*================
+    flex box 
+ =================*/
+
+ @media (min-width:768px) {
+     .main-header,
+     .main-nav,
+     .row,
+     .sub-title{
+         display: flex;
+     }
+
+     .main-header{
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .col{
+         flex: 1 50%;
+     }
+     .row{
+         flex-direction: row;
+         align-items: center;
+         flex-wrap: wrap;
+     }
+
+     .sub-title{
+         flex-direction: column;
+         align-items: center;
+     }
+
+}
+}
+
+@media (min-width: 1024px) {
+    .main-nav,
+    .main-header h1
+    {
+flex-direction: row;
+    }
+}
