@@ -9,7 +9,8 @@ body{
     margin: 0;
 }
 .main-header,
-.main-footer{
+.main-footer,
+#profile{
     background: #f9f9f9;
 
 }
@@ -22,7 +23,10 @@ ul{
 
 a{
     text-decoration: none;
+}
 
+a:hover{
+    color: #326e99;
 }
 h1,
 h2,
@@ -41,7 +45,7 @@ h3{
 
 
 .banner img{
-    width: 100%;
+    width: 80%;
 }
 
 img{
@@ -49,13 +53,12 @@ img{
 }
 
 .main-header h1,
-.top-page{
+#top-page{
     text-transform: uppercase;
     font-weight: 600;
     font-size: .8em;
 }
 .contact{
-    padding: 0 4em;
     text-align: center;
 }
 
@@ -74,7 +77,7 @@ img{
 .main-nav li{
     text-align: center;
     display: block;
-    padding: 0.05em 15px;
+    margin: 2em 15px;
     
 }
 
@@ -100,9 +103,12 @@ img{
     padding-bottom: .5em;
 }
 
-.main-footer,
-.sub-footer,
-.banner{
+.banner,
+.project{
+    text-align: center;
+}
+
+#protfolio{
     text-align: center;
 }
 
@@ -111,42 +117,45 @@ img{
 }
 .sub-title{
     text-align: center;
+    margin: 3em 0;
 }
 
-.col{
+.project{
     padding-right: 1em;
     padding-left:  1em;
 }
 
-.main-footer,
-.sub-nav{
+.main-footer{
     padding: 2em 0;
     margin-top: 30px;
 }
-
+.contact ul{
+    padding-bottom: 2em;
+}
 .sub-nav{
-    padding-bottom: 0;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
     border-top: darkgrey solid .5px;
+    padding-top: 1em;
     margin: 0 10px;
 }
 
 .profile-picture{
     padding: 1em 1em 1em 1em;
 }
-
-/* media  */
+ 
 @media (min-width: 768px) {
     .main-header,
     .row{
         width: 100%;
         margin: 0 auto;
-
     }
-    .banner img{
-        width: 50%;
+        
+    .banner .profile-picture{
+        width: 30%;
         float: right;
-
-    }
+}
 
     .banner p{
         text-align: left;
@@ -165,19 +174,24 @@ img{
  =================*/
 
  @media (min-width:768px) {
+     .container,
      .main-header,
      .main-nav,
-     .row,
-     .sub-title{
+     .profile,
+     .row{
          display: flex;
      }
-
+     .banner img{
+         flex-direction: row;
+         width: 50%;
+         justify-content: flex-end;
+     }
      .main-header{
          flex-direction: column;
          align-items: center;
      }
 
-     .col{
+     .project{
          flex: 1 50%;
      }
      .row{
@@ -195,9 +209,20 @@ img{
 }
 
 @media (min-width: 1024px) {
-    .main-nav,
-    .main-header h1
+    .container,
+    .main-header,
+    .main-nav
     {
-flex-direction: row;
+display: flex;
     }
+
+    .project{
+        flex: 1 30%;
+    }
+
+    .main-header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
 }
