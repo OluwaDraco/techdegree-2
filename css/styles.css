@@ -144,7 +144,10 @@ img{
 .profile-picture{
     padding: 1em 1em 1em 1em;
 }
- 
+ .main-header,
+ #profile{
+     padding-bottom: 4em;
+ }
 @media (min-width: 768px) {
     .main-header,
     .row{
