@@ -15,7 +15,8 @@ body{
 
 }
 
-ul{
+ul,
+.main-nav a{
     list-style: none;
     margin: 0;
     padding: 0;
@@ -27,6 +28,9 @@ a{
 
 a:hover{
     color: #326e99;
+}
+a:visited{
+    color: blue;
 }
 h1,
 h2,
@@ -58,7 +62,8 @@ img{
     font-weight: 600;
     font-size: .8em;
 }
-.contact{
+.contact,
+.contact-info{
     text-align: center;
 }
 
@@ -74,7 +79,7 @@ img{
 }
 
 .main-header h1,
-.main-nav li{
+.main-nav a{
     text-align: center;
     display: block;
     margin: 2em 15px;
@@ -87,7 +92,7 @@ img{
     color: darkgray;
     
 }
-.main-nav li{
+.main-nav a{
     border-bottom: 1px solid #ebecee;
 }
 
@@ -148,6 +153,8 @@ img{
  #profile{
      padding-bottom: 4em;
  }
+
+ /**** media display****/
 @media (min-width: 768px) {
     .main-header,
     .row{
@@ -159,9 +166,13 @@ img{
         width: 30%;
         float: right;
 }
+.banner{
+    height: 20vh;
+}
 
     .banner p{
         text-align: left;
+        margin: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -169,6 +180,9 @@ img{
     .row{
         width: 100%;
         max-width: 1150px;
+    }
+    .banner{
+        height: 25vh;
     }
 }
 
@@ -209,7 +223,6 @@ img{
      }
 
 }
-}
 
 @media (min-width: 1024px) {
     .container,
@@ -227,5 +240,4 @@ display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    
 }
