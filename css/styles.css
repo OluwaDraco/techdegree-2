@@ -3,7 +3,10 @@
     box-sizing: border-box;
 }
 body{
-    font: 1em 'Work sans',sans-serif;
+    font-family: 'Work sans',sans-serif;
+}
+body{
+    font-size: 1em;
     line-height: 1.5;
     color: #3a3a3a;
     margin: 0;
@@ -43,14 +46,12 @@ h3{
     text-align: center;
 }
 .about-me{
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 
-.banner img{
-    width: 80%;
-}
+
 
 img{
     width: 100%;
@@ -108,18 +109,17 @@ img{
     padding-bottom: .5em;
 }
 
-.banner,
-.project{
-    text-align: center;
-}
-
-#protfolio{
-    text-align: center;
-}
 
 .banner{
     padding: 2.2em 0;
 }
+.banner p{
+    margin: 0 1em;
+}
+#protfolio{
+    text-align: center;
+}
+
 .sub-title{
     text-align: center;
     margin: 3em 0;
@@ -139,50 +139,60 @@ img{
 }
 .sub-nav{
     display: flex;
+    flex-direction: row;
     flex-shrink: 0;
-    justify-content: space-between;
+    justify-content: flex-end;
     border-top: darkgrey solid .5px;
     padding-top: 1em;
     margin: 0 10px;
 }
 
-.profile-picture{
-    padding: 1em 1em 1em 1em;
+.sub-nav .name{
+    margin-right: auto;
+    font-weight:700 ;
 }
- .main-header,
- #profile{
+.sub-nav li{
+    padding-left:1em;
+    padding-right: 1em;
+}
+/***
+.profile-picture{
+    margin: 1em 1em 1em 1em;
+}
+***/
+ .main-header{
      padding-bottom: 4em;
  }
+ .full{
+    display: none;
+
+}
 
  /**** media display****/
 @media (min-width: 768px) {
+    .full{
+        display: inline-block;
+    }
+
+    .top{
+        display: none;
+    }
+
     .main-header,
     .row{
         width: 100%;
         margin: 0 auto;
     }
         
-    .banner .profile-picture{
-        width: 30%;
-        float: right;
-}
-.banner{
-    height: 20vh;
-}
-
-    .banner p{
-        text-align: left;
-        margin: 2rem;
 }
 
 @media (min-width: 1024px) {
     .main-header,
     .row{
         width: 100%;
-        max-width: 1150px;
     }
     .banner{
-        height: 25vh;
+        height: 35vh;
     }
 }
 
@@ -195,17 +205,36 @@ img{
      .main-header,
      .main-nav,
      .profile,
-     .row{
+     .row,
+     .banner{
          display: flex;
      }
-     .banner img{
-         flex-direction: row;
-         width: 50%;
-         justify-content: flex-end;
-     }
+     
+
      .main-header{
          flex-direction: column;
          align-items: center;
+     }
+
+     .banner{
+         flex-direction: row-reverse;
+         align-content: flex-start;
+         font-size: 1rem;
+         padding-bottom: 3rem;
+     }
+     .banner img{
+         width: 40%;
+         margin: 0.5em;
+     }
+
+     .banner p{
+         text-align: left;
+         margin: 1em 0 0 1em;
+         align-self: flex-start;
+     }
+
+     #protfolio{
+         text-align: center;
      }
 
      .project{
